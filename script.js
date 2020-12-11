@@ -7,19 +7,21 @@
 //Solution 1
 
 var arr = [15, -2, 22, 0, 13];
+var maxNum
 
-var maxNumber = arr[0];
-if (maxNumber < arr[1]) {
-    maxNumber = arr[1];
-} else if (maxNumber < arr[2]) {
-    maxNumber = arr[2];
-} else if (maxNumber < arr[3]) {
-    maxNumber = arr[3];
-} else if (maxNumber < arr[4]) {
-    maxNumber = arr[4];
+if (arr[0] > arr[1] && arr[0] > arr[2] && arr[0] > arr[3] && arr[0] > arr[4]) {
+    maxNum = arr[0];
+} else if (arr[1] > arr[0] && arr[1] > arr[2] && arr[1] > arr[3] && arr[1] > arr[4]) {
+    maxNum = arr[1];
+} else if (arr[2] > arr[0] && arr[2] > arr[1] && arr[2] > arr[3] && arr[2] > arr[4]) {
+    maxNum = arr[2];
+} else if (arr[3] > arr[0] && arr[3] > arr[1] && arr[3] > arr[2] && arr[3] > arr[4]) {
+    maxNum = arr[3];
+} else if (arr[4] > arr[0] && arr[4] > arr[1] && arr[4] > arr[2] && arr[4] > arr[3]) {
+    maxNum = arr[4];
 }
 
-console.log("The largest of the five numbers in the array is " + maxNumber + ".");
+console.log("The largest of the five numbers in the array is " + maxNum + ".");
 
 // Solution 2
 
@@ -34,8 +36,11 @@ console.log(`The largest of the five numbers in the array is ${Math.max(...arr)}
 // Numbers : 3, -7, 2 
 
 var product = 3 * -7 * 2;
+var sign;
 
-product >= 0 ? console.log(`The product of three number is ${product}, which is positive number.`) : console.log(`The product of three number is ${product}, which is negative number.`);
+product >= 0 ? sign = "positive" : sign = "negative";
+
+console.log(`The product of three number is ${product}, which is a ${sign} number.`)
 
 // TASK 3 :
 
